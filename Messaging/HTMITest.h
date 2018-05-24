@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Cat : NSObject
+@interface HTMITest : NSObject
 
 @end

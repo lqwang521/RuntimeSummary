@@ -5,7 +5,7 @@
 
 #import "ViewController.h"
 
-#import "Cat.h"
+#import "HTMITest.h"
 
 @interface ViewController ()
 
@@ -16,12 +16,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Cat *billy = [[Cat alloc] init];
+    HTMITest *test = [[HTMITest alloc] init];
     
     // 这个时候 billy 对象并没有 run: 方法
     // 所以会进入 + (BOOL)resolveClassMethod:(SEL)sel 处理
     // 然后方法被动态添加
-    [billy performSelector:@selector(run:) withObject:@10];
+    [test performSelector:@selector(test:) withObject:@10];
 }
 
 @end

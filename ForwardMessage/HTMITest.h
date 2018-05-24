@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Cat : NSObject
+@interface HTMITest : NSObject
 
-+ (void)stoke;
++ (void)test;
 
-- (void)stoke;
+- (void)test;
 
 @end

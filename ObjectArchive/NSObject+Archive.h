@@ -12,7 +12,7 @@
 
 - (NSArray *)ignoredProperty;
 
-- (void)tuc_encodeWithCoder:(NSCoder *)aCoder;
-- (void)tuc_initWithCoder:(NSCoder *)aDecoder;
+- (void)htmi_encodeWithCoder:(NSCoder *)aCoder;
+- (void)htmi_initWithCoder:(NSCoder *)aDecoder;
 
 @end

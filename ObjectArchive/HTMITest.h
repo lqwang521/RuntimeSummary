@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Cat : NSObject
+@interface HTMITest : NSObject
 
 @property (nonatomic, copy) NSString *name;
 

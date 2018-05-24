@@ -6,11 +6,11 @@
 //  Copyright © 2016年 Tuccuay. All rights reserved.
 //
 
-#import "Cat.h"
+#import "HTMITest.h"
 
 #import "NSObject+Archive.h"
 
-@implementation Cat
+@implementation HTMITest
 
 - (NSArray *)ignoredNames {
     return @[];
@@ -18,13 +18,13 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super init]) {
-        [self tuc_initWithCoder:aDecoder];
+        [self htmi_initWithCoder:aDecoder];
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [self tuc_encodeWithCoder:aCoder];
+    [self htmi_encodeWithCoder:aCoder];
 }
 
 @end

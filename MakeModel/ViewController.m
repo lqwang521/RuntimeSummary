@@ -29,9 +29,6 @@
                                                 
                                                 // 因为 Github 的 API 中有一个字段是 id
                                                 // 而 id 在 Objective-C 中已经被占用
-                                                // GithubUser *tuccuay = [GithubUser modelWithDict:dict];
-                                                
-                                                // 所以把 id 替换成 ID
                                                 GithubUser *tuccuay = [GithubUser modelWithDict:dict updateDict:@{@"ID":@"id"}];
                                                 
                                                 // 给下面的 NSLog 打个断点

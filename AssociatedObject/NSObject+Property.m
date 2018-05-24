@@ -12,16 +12,13 @@
 
 @implementation NSObject (Property)
 
-// 这种方法生成的变量不受对象控制
-// NSString *_name;
-
 - (void)setName:(NSString *)name {
-    // 把属性关联给对象
-    objc_setAssociatedObject(self, "name", name, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    // 属性关联给对象
+    objc_setAssociatedObject(self, "name", name, OBJC_ASSOCIATION_COPY);
 }
 
 - (NSString *)name {
-    // 取出属性
+    // 得到属性
     return objc_getAssociatedObject(self, "name");
 }
 

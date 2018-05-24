@@ -4,7 +4,7 @@
 // ForwardMessage / 消息转发
 
 #import "ViewController.h"
-#import "Cat.h"
+#import "HTMITest.h"
 
 @interface ViewController ()
 
@@ -13,11 +13,11 @@
 @implementation ViewController
 
 - (IBAction)instanceMethodCalling {
-    [[Cat new] stoke];
+    [[HTMITest new] test];
 }
 
 - (IBAction)classMethodCalling {
-    [Cat stoke];
+    [HTMITest test];
 }
 
 @end

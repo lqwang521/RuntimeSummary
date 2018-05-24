@@ -12,6 +12,6 @@
 
 // @property 在分类中只会生成 getter/setter 方法
 // 不会生成成员属性
-@property NSString *name;
+@property (nonatomic, copy) NSString *name;
 
 @end

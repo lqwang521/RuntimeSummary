@@ -16,8 +16,7 @@
     return @[];
 }
 
-- (void)tuc_initWithCoder:(NSCoder *)aDecoder {
-    // 不光归档自身的属性，还要循环把所有父类的属性也找出来
+- (void)htmi_initWithCoder:(NSCoder *)aDecoder {
     Class selfClass = self.class;
     while (selfClass &&selfClass != [NSObject class]) {
         
@@ -27,9 +26,7 @@
             Ivar ivar = ivars[i];
             NSString *key = [NSString stringWithUTF8String:ivar_getName(ivar)];
             
-            // 如果有实现忽略属性的方法
             if ([self respondsToSelector:@selector(ignoredProperty)]) {
-                // 就跳过这个属性
                 if ([[self ignoredProperty] containsObject:key]) continue;
             }
             
@@ -42,7 +39,7 @@
     
 }
 
-- (void)tuc_encodeWithCoder:(NSCoder *)aCoder {
+- (void)htmi_encodeWithCoder:(NSCoder *)aCoder {
     Class selfClass = self.class;
     while (selfClass &&selfClass != [NSObject class]) {
         

@@ -6,21 +6,21 @@
 //  Copyright © 2016年 Tuccuay. All rights reserved.
 //
 
-#import "Cat.h"
+#import "HTMITest.h"
 
 #import <objc/message.h>
 
-@implementation Cat
+@implementation HTMITest
 
-void run(id self, SEL _cmd,  NSNumber *metre) {
-    NSLog(@"跑了%@米",metre);
+void test(id self, SEL _cmd,  NSNumber *test) {
+    NSLog(@"测试%@",test);
 }
 
 // 当调用了一个未实现的方法会来到这里
 + (BOOL)resolveInstanceMethod:(SEL)sel {
-    if (sel == NSSelectorFromString(@"run:")) {
-        // 动态添加 run: 方法
-        class_addMethod(self, @selector(run:), run, "v@:@");
+    if (sel == NSSelectorFromString(@"test:")) {
+        // 动态添加方法
+        class_addMethod(self, @selector(test:), test, "v@:@");
         
         return YES;
     }

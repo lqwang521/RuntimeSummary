@@ -5,11 +5,11 @@
 
 #import "ViewController.h"
 
-#import "Cat.h"
+#import "HTMITest.h"
 
 @interface ViewController ()
 
-@property (nonatomic, strong) Cat *anCat;
+@property (nonatomic, strong) HTMITest *anCat;
 @property (nonatomic, copy) NSString *path;
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -27,7 +27,7 @@
     self.anCat = [NSKeyedUnarchiver unarchiveObjectWithFile:self.path];
     
     if (!self.anCat) {
-        self.anCat = [[Cat alloc] init];
+        self.anCat = [[HTMITest alloc] init];
     }
     
     self.textField.text = self.anCat.name;
